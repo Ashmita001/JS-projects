@@ -1,0 +1,163 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e); /* Dark gradient background */
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Container styling */
+.container {
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black container */
+    border-radius: 15px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3); /* Soft shadow for depth */
+    max-width: 500px;
+    width: 100%;
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect for the container */
+.container:hover {
+    transform: scale(1.05);
+}
+
+/* Title styling */
+h1 {
+    font-size: 2.5em;
+    color: #00d4ff; /* Neon Blue */
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-bottom: 30px;
+    animation: pulse 1.5s infinite; /* Pulse animation */
+}
+
+/* Input container styling */
+.input-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+/* Input styling */
+#city-input {
+    padding: 15px;
+    font-size: 1.2em;
+    border: 2px solid #00d4ff; /* Neon Blue border */
+    border-radius: 30px;
+    background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent white */
+    color: #fff;
+    outline: none;
+    width: 70%;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+#city-input:focus {
+    border-color: #ff0080; /* Neon Pink */
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Button styling */
+#get-weather-btn {
+    padding: 15px 25px;
+    font-size: 1.2em;
+    background-color: #ff0080; /* Neon Pink */
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    width: 25%;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#get-weather-btn:hover {
+    background-color: #ff2b72; /* Darker Pink */
+    transform: scale(1.05); /* Button scale effect */
+}
+
+#get-weather-btn:active {
+    background-color: #e60063; /* Even darker pink on active */
+}
+
+/* Weather info styling */
+#weather-info {
+    margin-top: 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+#weather-info {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#weather-info h2 {
+    font-size: 2em;
+    color: #00ff99; /* Neon Green */
+    margin-bottom: 15px;
+}
+
+#weather-info p {
+    font-size: 1.3em;
+    margin: 10px 0;
+    font-weight: 500;
+}
+
+/* Error message styling */
+#error-message {
+    color: #ff3333; /* Red for error */
+    font-size: 1.2em;
+    margin-top: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+#error-message.show {
+    opacity: 1;
+}
+
+/* Responsive styling for mobile */
+@media (max-width: 600px) {
+    .container {
+        padding: 25px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    #city-input {
+        width: 60%;
+    }
+
+    #get-weather-btn {
+        width: 30%;
+    }
+}
+
+/* Keyframe animation for pulse effect */
+@keyframes pulse {
+    0% {
+        text-shadow: 0 0 5px #00d4ff, 0 0 10px #00d4ff, 0 0 15px #00d4ff;
+    }
+    50% {
+        text-shadow: 0 0 15px #00d4ff, 0 0 20px #00d4ff, 0 0 30px #00d4ff;
+    }
+    100% {
+        text-shadow: 0 0 5px #00d4ff, 0 0 10px #00d4ff, 0 0 15px #00d4ff;
+    }
+}

@@ -1,0 +1,150 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #ff7e5f, #feb47b); /* Gradient background for a dynamic feel */
+    color: #f99696; /* Light text color for readability */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Container styling */
+.container {
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
+    border-radius: 12px; /* Rounded corners */
+    padding: 40px;
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+}
+
+/* Title styling */
+h1 {
+    font-size: 2.5em;
+    color: #ff7e5f; /* Warm coral color for the title */
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* Input container styling */
+.input-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+/* Input styling */
+#city-input {
+    padding: 15px;
+    font-size: 1.2em;
+    border: 2px solid #ff7e5f; /* Border matching the title */
+    border-radius: 4px;
+    outline: none;
+    width: 70%;
+    background-color: #fff;
+    color: #333; /* Dark text color inside input */
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+#city-input:focus {
+    border-color: #feb47b; /* Accent border color */
+    background-color: #fffbf1; /* Soft background on focus */
+}
+
+/* Button styling */
+#get-weather-btn {
+    padding: 15px 20px;
+    font-size: 1.2em;
+    background-color: #ff7e5f; /* Coral color for the button */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 25%;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#get-weather-btn:hover {
+    background-color: #feb47b; /* Lighter yellow-orange on hover */
+    transform: scale(1.05); /* Slightly larger button on hover */
+}
+
+#get-weather-btn:active {
+    background-color: #ff7e5f; /* Revert to original color on click */
+    transform: scale(1); /* Return to normal size */
+}
+
+/* Weather info styling */
+#weather-info {
+    margin-top: 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+#weather-info{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#weather-info h2 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    color: #feb47b; /* Accent color for city name */
+}
+
+#weather-info p {
+    font-size: 1.5em;
+    margin: 8px 0;
+}
+
+/* Error message styling */
+#error-message {
+    color: #ff4d4d; /* Red for error message */
+    font-size: 1.2em;
+    margin-top: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+#error-message {
+    opacity: 1;
+}
+
+/* Smooth transition for weather and error messages */
+.hidden {
+    display: none;
+}
+
+/* Responsive styling */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+        max-width: 100%;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    #city-input {
+        width: 60%;
+    }
+
+    #get-weather-btn {
+        width: 35%;
+    }
+}
+

@@ -1,0 +1,115 @@
+/* style.css */
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(120deg, #ffecd2 0%, #fcb69f 100%);
+    color: #333;
+}
+
+.container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+h1, h2 {
+    font-weight: 700;
+    color: #ff6f61; /* Vibrant heading color */
+    margin-bottom: 15px;
+}
+
+#product-list, #cart-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+#product-list .product, #cart-items .cart-item {
+    background: #fffbf1;
+    border: 1px solid #ffd9c2;
+    border-radius: 12px;
+    padding: 15px;
+    width: 200px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#product-list .product:hover, #cart-items .cart-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+#empty-cart {
+    font-size: 1.1em;
+    color: #999;
+    font-style: italic;
+}
+
+#cart-total {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+#cart-total p {
+    font-weight: bold;
+    color: #ff6f61;
+}
+
+.hidden {
+    display: none;
+}
+
+#checkout-btn {
+    margin-top: 15px;
+    padding: 12px 25px;
+    background-color: #ff6f61;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+#checkout-btn:hover {
+    background-color: #e55c4e;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+button {
+    padding: 10px 20px;
+    background: #ffe1d4; /* Soft button background */
+    color: #ff6f61;
+    border: 2px solid #ff6f61;
+    border-radius: 15px;
+    font-size: 0.9em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: #ff6f61;
+    color: white;
+    border-color: #e55c4e;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+    #product-list .product, #cart-items .cart-item {
+        width: 100%;
+        max-width: 300px;
+    }
+}

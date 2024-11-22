@@ -1,0 +1,165 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1a1a1a; /* Dark background */
+    color: #e0e0e0; /* Light text color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+/* Container styles */
+.container {
+    background-color: #252525; /* Darker container */
+    border-radius: 12px;
+    box-shadow: 0 12px 24px rgba(0, 255, 255, 0.2); /* Neon shadow */
+    padding: 30px;
+    max-width: 450px;
+    width: 100%;
+    border: 2px solid #00ffff; /* Neon border */
+    /* backdrop-filter: blur(8px); Blurred background effect */
+}
+
+/* Title styles */
+h1 {
+    text-align: center;
+    color: #00ff00; /* Neon green */
+    font-size: 2.5em;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 8px rgba(0, 255, 0, 0.7), 0 0 16px rgba(0, 255, 0, 0.7);
+}
+
+/* Input container styles */
+.input-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+/* Completed task styles */
+.completed span {
+    text-decoration: line-through;
+    color: #ff5c8e; /* Pink for completed task text */
+    text-shadow: 0 0 4px #ff5c8e;
+}
+
+/* Input field styles */
+#todo-input {
+    width: 80%;
+    padding: 15px;
+    border: 2px solid #00ffff; /* Neon border */
+    border-radius: 8px;
+    font-size: 1.2em;
+    color: #fff;
+    background-color: #333;
+    outline: none;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 0 6px #00ffff;
+}
+
+#todo-input:focus {
+    border-color: #ff00ff; /* Neon purple */
+    background-color: #444;
+}
+
+/* Add task button styles */
+#add-task-btn {
+    background-color: #00ff00; /* Neon green */
+    color: black;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 0 6px #00ff00;
+}
+
+#add-task-btn:hover {
+    background-color: #00e600;
+    transform: scale(1.1);
+}
+
+#add-task-btn:active {
+    background-color: #009900;
+}
+
+/* Todo list styles */
+ul#todo-list {
+    list-style: none;
+    padding: 0;
+}
+
+ul#todo-list li {
+    background-color: #2a2a2a;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 255, 255, 0.3); /* Neon cyan shadow */
+    transition: background-color 0.3s ease;
+}
+
+ul#todo-list li:hover {
+    background-color: #333;
+}
+
+ul#todo-list li .task-text {
+    font-size: 1.2em;
+    color: #fff;
+    text-shadow: 0 0 4px rgba(0, 255, 255, 0.8);
+}
+
+ul#todo-list li button {
+    background-color: #ff5c8e; /* Neon pink */
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 0 6px #ff5c8e;
+}
+
+ul#todo-list li button:hover {
+    background-color: #ff2a6d;
+    transform: scale(1.1);
+}
+
+ul#todo-list li button:active {
+    background-color: #d12459;
+}
+
+/* Responsive styling */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+        max-width: 100%;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    #todo-input {
+        width: 70%;
+    }
+
+    #add-task-btn {
+        width: 25%;
+    }
+}
