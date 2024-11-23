@@ -1,0 +1,109 @@
+/* General Reset */
+body, h1, h2, h3, ul, input, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f6f8fa;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Container Styling */
+.container {
+    background: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+}
+
+/* Heading Styling */
+h1 {
+    font-size: 1.8rem;
+    color: #004085;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 1.2rem;
+    color: #2f5d62;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-size: 1rem;
+    color: #006d77;
+}
+
+/* Form Styling */
+form {
+    margin-bottom: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+input:focus {
+    outline: none;
+    border-color: #006d77;
+    box-shadow: 0 0 4px rgba(0, 109, 119, 0.4);
+}
+
+/* Button Styling */
+button {
+    background-color: #004085;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Expense List Styling */
+#expense-list {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+#expense-list li {
+    background-color: #eef4f8;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Total Section */
+#total {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #eef4f8;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
